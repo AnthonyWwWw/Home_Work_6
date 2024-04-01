@@ -12,26 +12,40 @@
       середнє арифметичне лише числових елементів даного масиву.
     */
 
-    let mass = [" ", 123, true, 5, "w", NaN, 52, 73];
+    //example_3
 
-    function searchArithmeticAverage(mass){
-      let numericArray = [];
-      let result = 0;
+    //example_2
+    // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
+    // function searchArithmeticAverage(mass){
+    //   let numbersMass = mass.filter(function(item) {// перебираємо масив та перевіряємо на number та NaN.
+    //       return typeof item === "number" && !isNaN(item);
+    //   });
+    //   return numbersMass;
+    // }
+    // let result = searchArithmeticAverage(mass);
+    // console.log(result);
 
-      mass.forEach(function (element){
-          if (!isNaN(element) && typeof element === "number"){
-            numericArray.push(element);
-          }
-        });
 
-      for (const item of numericArray){
-        result += item;
-      }
-      return result;
-    }
-
-    let result = searchArithmeticAverage(mass);
-    console.log(result);
+    //example_1
+    // let mass = [" ", 123, true, 5, "w", NaN, 52, 73];
+    // function searchArithmeticAverage(mass){
+    //   let numericArray = [];
+    //   let result = 0;
+    //
+    //   mass.forEach(function (element){
+    //       if (!isNaN(element) && typeof element === "number"){
+    //         numericArray.push(element);
+    //       }
+    //     });
+    //
+    //   for (const item of numericArray){
+    //     result += item;
+    //   }
+    //   return result;
+    // }
+    //
+    // let result = searchArithmeticAverage(mass);
+    // console.log(result);
   </script>
 </body>
 
