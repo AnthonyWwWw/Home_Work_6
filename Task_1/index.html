@@ -18,7 +18,7 @@
     let characterstToDelete = prompt("Ви маєте ввести символи які потрібно видалити:");
     let massRemoveItem = characterstToDelete.split("");
 
-    function removeCharacters(uneditedLine, massRemoveItem){
+    function removeCharacters(uneditedLine, massRemoveItem){//параметри приймаються у вигляді (" hello world", ['l', 'd'])
       let stringArray = uneditedLine.split("");
       for (let i = 0;i < stringArray.length; i++ ){//перебираємо кожний символ рядка
         if (massRemoveItem.includes(stringArray[i])){// якщо поточний символ є у масиві символів для видалення
@@ -36,10 +36,9 @@
     //Example1
     // let uneditedLine = prompt("Введіть будь який текст");
     // let characterstToDelete = prompt("Ви маєте ввести символи які потрібно видалити:");// символи які потрібно видалити
-    //
-    // function removeCharacters(uneditedLine, stringRemove) {
+    // let massCharacterstToDelete = characterstToDelete.toString().split("");
+    // function removeCharacters(uneditedLine, massCharacterstToDelete) { //
     //   let massUneditedLine = uneditedLine.toString().split("");
-    //   let massCharacterstToDelete = characterstToDelete.toString().split("");
     //   let editedString = [];
     //
     //   for (const itemRemove of massCharacterstToDelete) {// перебираємо масив значень сиволів, які потрібно видалити
@@ -55,7 +54,7 @@
     //   console.log(`Видалені символи: ${editedString.join("")}`); // Виводимо видалені символи у вигляді рядка
     // }
     //
-    // removeCharacters(uneditedLine, characterstToDelete);
+    // removeCharacters(uneditedLine, massCharacterstToDelete);
   </script>
 </body>
 
