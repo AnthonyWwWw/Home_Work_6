@@ -8,10 +8,30 @@
 <body>
   <script>
     /*
-    
+      Дано масив з елементами різних типів. Створити функцію яка вираховує
+      середнє арифметичне лише числових елементів даного масиву.
     */
 
+    let mass = [" ", 123, true, 5, "w", NaN, 52, 73];
 
+    function searchArithmeticAverage(mass){
+      let numericArray = [];
+      let result = 0;
+
+      mass.forEach(function (element){
+          if (!isNaN(element) && typeof element === "number"){
+            numericArray.push(element);
+          }
+        });
+
+      for (const item of numericArray){
+        result += item;
+      }
+      return result;
+    }
+
+    let result = searchArithmeticAverage(mass);
+    console.log(result);
   </script>
 </body>
 
