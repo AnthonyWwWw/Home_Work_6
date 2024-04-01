@@ -1,0 +1,64 @@
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    /*
+    Створити функцію, яка прибирає з рядка всі символи, які ми передали другим аргументом.
+    'func(" hello world", ['l', 'd'])' поверне нам "heo wor". Вихідний рядок та символи для видалення
+    задає користувач.
+    */
+
+    //Example2
+    let uneditedLine = prompt("Введіть будь який текст");
+    let characterstToDelete = prompt("Ви маєте ввести символи які потрібно видалити:");
+    let massRemoveItem = characterstToDelete.split("");
+
+
+    function removeCharacters(uneditedLine, massRemoveItem){
+      let stringArray = uneditedLine.split("");
+      for (let i = 0;i < stringArray.length; i++ ){//перебираємо кожний символ рядка
+        if (massRemoveItem.includes(stringArray[i])){// якщо поточний символ є у масиві символів для видалення
+          stringArray.splice(i,1);//видаляємо елемент
+          i--;
+        }
+      }
+      return stringArray.join("");
+    }
+
+    let result = removeCharacters(uneditedLine, massRemoveItem);
+    console.log(result);
+
+
+    //Example1
+
+    // let uneditedLine = prompt("Введіть будь який текст");
+    // let characterstToDelete = prompt("Ви маєте ввести символи які потрібно видалити:");// символи які потрібно видалити
+    //
+    // function removeCharacters(uneditedLine, stringRemove) {
+    //   let massUneditedLine = uneditedLine.toString().split("");
+    //   let massCharacterstToDelete = characterstToDelete.toString().split("");
+    //   let editedString = [];
+    //
+    //   for (const itemRemove of massCharacterstToDelete) {// перебираємо масив значень сиволів, які потрібно видалити
+    //     for (const itemString of massUneditedLine) {// перебираємо масив значень рядка в якому потрібно провести видалення
+    //       if (itemRemove === itemString) {
+    //         console.log(`Було видалено ${itemRemove}`);
+    //       } else{
+    //         editedString.push(itemString);
+    //       }
+    //     }
+    //   }
+    //
+    //   console.log(`Видалені символи: ${editedString.join("")}`); // Виводимо видалені символи у вигляді рядка
+    // }
+    //
+    // removeCharacters(uneditedLine, characterstToDelete);
+  </script>
+</body>
+
+</html>
