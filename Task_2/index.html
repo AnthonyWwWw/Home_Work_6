@@ -13,18 +13,33 @@
     */
 
     //example_3
+    let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
+    function searchArithmeticAverage(mass){
+      let value = 0;
+        mass.forEach(element =>{
+            if (typeof element === "number" && !isNaN(element)){
+               value += element;
+            }
+        })
+      return value;
+    }
+    let result = searchArithmeticAverage(mass);
+    console.log(result);
 
-    //example_2
+    //example_2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
     // function searchArithmeticAverage(mass){
+    //   let value = 0;
     //   let numbersMass = mass.filter(function(item) {// перебираємо масив та перевіряємо на number та NaN.
     //       return typeof item === "number" && !isNaN(item);
     //   });
-    //   return numbersMass;
-    // }
+    //   for (const element of numbersMass){
+    //      value += element;
+    //   };
+    //   return value;
+    // };
     // let result = searchArithmeticAverage(mass);
     // console.log(result);
-
 
     //example_1
     // let mass = [" ", 123, true, 5, "w", NaN, 52, 73];
