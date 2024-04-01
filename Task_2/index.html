@@ -13,18 +13,21 @@
     */
 
     //example_3
-    // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
-    // function searchArithmeticAverage(mass){
-    //   let value = 0;
-    //     mass.forEach(element =>{
-    //         if (typeof element === "number" && !isNaN(element)){
-    //            value += element;
-    //         }
-    //     })
-    //   return value;
-    // }
-    // let result = searchArithmeticAverage(mass);
-    // console.log(result);
+    let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
+    function searchArithmeticAverage(mass){
+      let value = 0;
+      count = 0;// ініціальзуємо змінну для лічильника;
+
+        mass.forEach(element =>{//перебираємо кожний елемент масиву
+            if (typeof element === "number" && !isNaN(element)){ // перевіряємо чи задовольняється умова
+              count++;
+               value += element;
+            }
+        })
+      return value / count;
+    }
+    let result = searchArithmeticAverage(mass);
+    console.log(result);
 
     //example_2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
@@ -35,9 +38,9 @@
     //   });
     //   for (const element of numbersMass){
     //      value += element;
-    //   };
-    //   return value;
-    // };
+    //   }
+    //   return value / numbersMass.length;
+    // }
     // let result = searchArithmeticAverage(mass);
     // console.log(result);
 
