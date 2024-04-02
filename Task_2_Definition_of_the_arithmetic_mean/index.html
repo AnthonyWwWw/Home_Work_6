@@ -18,7 +18,8 @@
         let value = 0;
         let numbersMass = mass.filter(function(item) {// перебираємо масив та перевіряємо на number та NaN.
             if (typeof item === "number" && !isNaN(item)){
-                return value += item;
+                value += item;
+                return true;
             }
         });
         return value / numbersMass.length;
@@ -26,6 +27,7 @@
 
     let result = searchArithmeticAverage(mass);
     console.log(result);
+
 
     //example_2
     // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
