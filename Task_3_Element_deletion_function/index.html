@@ -1,0 +1,61 @@
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+<script>
+    /*
+    Реалізуйте функцію removeElement(array, item), щоб видалити елемент item з масиву array.
+
+    Наприклад:
+
+    const array = [1, 3, 4, 6, 2, 5, 7];
+
+    removeElement(array,4);
+
+    console.log(array); // Результат: [1, 3, 6, 2, 5, 7]
+    */
+
+    //Example_1 В даному прикладі ми видаляємо елемент з масиву не за його індексом, а за значенням.
+    function removeElement(array, item) {
+        let result = [];// ініціалізуємо новий масив в який будемо записувати результат
+
+        if (!isNaN(item)) {// перевіряє, чи змінна item є числом
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === item) {
+                    console.log(`Було видалено: ${array[i]}`);
+                } else {
+                    result.push(array[i]);
+                }
+            }
+        }
+        console.log(result);
+    }
+
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    removeElement(array, 4);//[1, 2, 3, 5, 6, 7, 8, 9, 10]
+
+    //Example_2 Виконано за допомогою тернарного оператора ?
+    // function removeElement(array, item){
+    //     let result = [];
+    //
+    //     if (typeof item === "number") {
+    //         for (let i = 0; i < array.length; i++){
+    //             array[i] === item
+    //                 ? console.log(`Було видалено: ${array[i]}`)
+    //                 : result.push(array[i]);
+    //         }
+    //     }
+    //     console.log(result);
+    // }
+    //
+    // let array = [1,2,3,4,5,6,7,8,9,10];
+    // removeElement(array, 4);//[1, 2, 3, 5, 6, 7, 8, 9, 10]
+
+</script>
+</body>
+
+</html>

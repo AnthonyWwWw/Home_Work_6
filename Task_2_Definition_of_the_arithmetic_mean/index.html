@@ -1,12 +1,12 @@
 <html class="no-js" lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
 </head>
 
 <body>
-  <script>
+<script>
     /*
       Дано масив з елементами різних типів. Створити функцію яка вираховує
       середнє арифметичне лише числових елементів даного масиву.
@@ -14,22 +14,24 @@
 
     //example_3
     let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
-    function searchArithmeticAverage(mass){
-      let value = 0;
-      count = 0;// ініціальзуємо змінну для лічильника;
 
-        mass.forEach(element =>{//перебираємо кожний елемент масиву
-            if (typeof element === "number" && !isNaN(element)){ // перевіряємо чи задовольняється умова
-              count++;
-               value += element;
+    function searchArithmeticAverage(mass) {
+        let value = 0;
+        let count = 0;// ініціальзуємо змінну для лічильника;
+
+        mass.forEach(element => {//перебираємо кожний елемент масиву
+            if (typeof element === "number" && !isNaN(element)) { // перевіряємо чи задовольняється умова
+                count++;
+                value += element;
             }
         })
-      return value / count;
+        return value / count;
     }
+
     let result = searchArithmeticAverage(mass);
     console.log(result);
 
-    //example_2 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //example_2
     // let mass = [" ", 123, true, 5n, "w", NaN, 52, 73];
     // function searchArithmeticAverage(mass){
     //   let value = 0;
@@ -53,12 +55,12 @@
     //   mass.forEach(function (element){
     //       if (!isNaN(element) && typeof element === "number"){
     //         numericArray.push(element);
-    //       }
-    //     });
+    //       }});
     //
     //   for (const item of numericArray){
     //     result += item;
     //   }
+
     //   console.log(numericArray.length)
     //   console.log(`Сума всіх доданків = ${result} // ${numericArray}`);
     //   return result / numericArray.length;
@@ -66,7 +68,7 @@
     //
     // let result = searchArithmeticAverage(mass);
     // console.log(result);
-  </script>
+</script>
 </body>
 
 </html>
